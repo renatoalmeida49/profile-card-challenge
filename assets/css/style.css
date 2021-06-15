@@ -7,22 +7,25 @@
 html, body {
     height: 100vh;
     font-family: 'Kumbh Sans';
-    color: hsl(229, 23%, 23%);
+    color: hsl(210, 1%, 41%);
 }
     
-.background {
-    background: url('../images/bg-pattern-top.svg') center no-repeat;
-    height: 100vh;
+body {
+    background: url('../images/bg-pattern-top.svg') left 120% top 1500% no-repeat,
+                url('../images/bg-pattern-bottom.svg') right 100% bottom 1900% no-repeat,
+              hsl(185, 75%, 39%);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 10px;
 }
 
 .card-background {
     background: url('../images/bg-pattern-card.svg') center no-repeat;
     height: 140px;
     width: 100%;
-    border-radius: 18px 18px 0 0;
+    border-radius: 16px 16px 0 0;
 }
 
 .card {
@@ -30,9 +33,11 @@ html, body {
     flex-direction: column;
     background: white;
     border-radius: 16px;
+    width: 100%;
+    max-width: 350px;
 }
 
-.card-top {
+.card-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,18 +46,18 @@ html, body {
     position: relative;
 }
 
-.card-top__personal {
+.card-header__personal {
     margin-bottom: 10px;
 }
 
-.card-top__personal span{
+.card-header__personal span{
     display: inline-block;
     margin: 4px 6px;
 }
 
 .age {
     font-weight: 400;
-    color: hsl(229, 23%, 23%);
+    color: hsl(210, 1%, 41%);
 }
 
 .img-wrapper {
@@ -69,6 +74,7 @@ html, body {
     display: flex;
     padding: 20px;
     border-top: 1px solid rgba(133, 133, 133, 0.5);
+    justify-content: space-between;
 }
 
 .card-data {
@@ -90,4 +96,29 @@ span {
     font-weight: 700;
     font-size: 18px;
     color: #000;
+}
+
+.attribution {
+    color: #fff;
+    border-radius: 4px;
+    font-size: 11px;
+    text-align: center;
+    padding: 10px 0px;
+    background: rgba(0, 0, 0, 0.267);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    body {
+        background: url('../images/bg-pattern-top.svg') left -40% top 1500% no-repeat,
+                    url('../images/bg-pattern-bottom.svg') right -40% bottom 1500% no-repeat,
+                  hsl(185, 75%, 39%);
+    }
 }
